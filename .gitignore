@@ -1,0 +1,90 @@
+# Config and cache
+config/
+__pycache__/
+
+# Logs
+log/
+*.log
+logs/
+debug.log
+
+# Odoo specific
+*.pid
+*.log
+docker-compose.override.yml
+*.csv
+*.json
+*.rst
+*.xml
+odoo_pg_pass
+*.db
+*.sqlite
+*.sqlite3
+
+# Python specific
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyd
+*.egg-info/
+*.egg
+*.pkl
+
+# Django specific
+/db.sqlite3
+/media/
+*.mo
+*.pot
+/static/
+*.cache
+
+# Ignore migrations (except the __init__.py)
+**/migrations/*
+!**/migrations/__init__.py
+
+# Environment files
+.env
+*.env
+.envrc
+venv/
+.venv/
+Pipfile
+Pipfile.lock
+poetry.lock
+
+# Virtual environments
+.env/
+venv/
+.venv/
+*.pyenv/
+.pyenv/
+__pypackages__/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+.pydevproject
+.project
+*.iml
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Docker specific
+docker-compose.override.yml
+docker-compose.dev.yml
+*.tar
+__docker_cache__/
+
+# Jupyter Notebooks (if used)
+.ipynb_checkpoints/
+*.ipynb_checkpoints
