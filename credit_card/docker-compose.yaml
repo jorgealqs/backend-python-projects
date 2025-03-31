@@ -18,6 +18,7 @@ services:
   db: # This service defines the PostgreSQL container.
     image: ${DB_IMAGE} # Uses the official PostgreSQL version 15 image.
     restart: unless-stopped
+    container_name: ${CONTAINER_NAME}
     environment:
       - POSTGRES_DB=${DB_NAME} # The default database name that will be created.
       - POSTGRES_PASSWORD_FILE=/run/secrets/postgresql_password # Specifies the location of the file containing the database password.
