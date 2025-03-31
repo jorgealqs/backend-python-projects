@@ -1,0 +1,41 @@
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    command: python manage.py runserver 0.0.0.0:${PORT_DEFAULT}
+    env_file:
+      - .env
+    ports:
+      - "${PORT_RUN}:${PORT_DEFAULT}" # Maps port 8069 of the container to port 8070 on the host, allowing access to Odoo via port 8071.
+    depends_on:
+      - db
+    secrets:
+      - postgresql_password # Defines a secret that will be passed securely to the container.
+    volumes:
+      - .:/app
+      - ./requirements.txt:/app/requirements.txt
+
+  db: # This service defines the PostgreSQL container.
+    image: ${DB_IMAGE} # Uses the official PostgreSQL version 15 image.
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=${DB_NAME} # The default database name that will be created.
+      - POSTGRES_PASSWORD_FILE=/run/secrets/postgresql_password # Specifies the location of the file containing the database password.
+      - POSTGRES_USER=${DB_USER} # Defines the PostgreSQL user as 'odoo'.
+      - PGDATA=/var/lib/postgresql/data/pgdata # Specifies the location of the PostgreSQL data directory.
+    volumes:
+      - backend-drf-db-data:/var/lib/postgresql/data/pgdata # Mounts a persistent volume for database data.
+    secrets:
+      - postgresql_password # Defines a secret that will be passed securely to the container.
+
+volumes:
+  backend-drf-web-data:
+    name: backend_drf_web_data_volume # Defines a persistent volume with a specific name for Odoo data.
+  backend-drf-db-data:
+    name: backend_drf_db_data_volume # Defines a persistent volume with a specific name for PostgreSQL data.
+
+secrets:
+  postgresql_password:
+    file: odoo_pg_pass # Specifies the location of the secret file containing the database password.
+
+name: ${DOCKER_NAME} # The name of the configuration, useful for identifying this specific project.
