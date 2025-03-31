@@ -63,7 +63,7 @@ Intelligent **social media automation and analytics** platform.
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/backend-python-projects.git
+git clone https://github.com/jorgealqs/backend-python-projects.git
 
 # Navigate to project
 cd backend-python-projects
@@ -77,6 +77,12 @@ venv\Scripts\activate     # Windows
 
 # Install dependencies
 pip install -r requirements.txt
+
+# Generate a ssh keygen
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+# Add your sshkeygen at ssh-agent
+ssh-add c:/Users/YOU/.ssh/id_ed25519
 ```
 
 ---
@@ -106,7 +112,7 @@ Each project includes detailed documentation in its respective directory:
 
 ### **Carlos ALberto Mendoza Cárdenas**
 
-- [![LinkedIn](https://www.linkedin.com/in/carlos-alberto-mendoza-c%C3%A1rdenas-73420b356/)
+- [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&cacheBust=1)](https://www.linkedin.com/in/carlosalbertomc/)
 - [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/526633312280?text=Hello%20Carlos,%20I'm%20interested%20in%20talking%20with%20you)
 
 ### **Jorge Alberto Quiroz Sierra**
