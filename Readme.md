@@ -112,7 +112,7 @@ Each project includes detailed documentation in its respective directory:
 
 ### **Carlos ALberto Mendoza Cárdenas**
 
-- [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/carlosmendoza92/)
+- [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/carlosmendoza92)
 - [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/526633312280?text=Hello%20Carlos,%20I'm%20interested%20in%20talking%20with%20you)
 
 ### **Jorge Alberto Quiroz Sierra**
