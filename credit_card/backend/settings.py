@@ -25,6 +25,7 @@ ALLOWED_HOSTS = ["*"]
 
 OWN_APPS = [
     "rest_framework",
+    "apps.home",
 ]
 
 INSTALLED_DEFAULT_APPS = [
