@@ -1,6 +1,5 @@
 # Config and cache
 config/
-__pycache__/
 
 # Logs
 log/
@@ -10,7 +9,6 @@ debug.log
 
 # Odoo specific
 *.pid
-*.log
 docker-compose.override.yml
 *.csv
 *.json
@@ -26,10 +24,6 @@ odoo_pg_pass
 *.pyo
 *.pyd
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.pyd
 *.egg-info/
 *.egg
 *.pkl
@@ -88,3 +82,18 @@ __docker_cache__/
 # Jupyter Notebooks (if used)
 .ipynb_checkpoints/
 *.ipynb_checkpoints
+
+# Cache de DRF y Django
+cache/
+
+# Tokens y credenciales temporales
+secret.json
+auth_tokens.json
+
+# Archivos de base de datos locales
+/db.sqlite3-journal
+
+# Archivos generados por Django REST Framework
+*.api
+*.session
+*.token
