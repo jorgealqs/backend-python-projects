@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv  # type: ignore
+from datetime import timedelta
 
 # Cargar variables de entorno desde un archivo .env (opcional)
 load_dotenv()
@@ -25,7 +26,9 @@ ALLOWED_HOSTS = ["*"]
 
 OWN_APPS = [
     "rest_framework",
+    'rest_framework_simplejwt',
     "apps.home",
+    "apps.login",
 ]
 
 INSTALLED_DEFAULT_APPS = [
@@ -125,3 +128,17 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
+
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),  # Duración del token
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),  # Token de refresco
+    "AUTH_HEADER_TYPES": ("Bearer",),
+}
