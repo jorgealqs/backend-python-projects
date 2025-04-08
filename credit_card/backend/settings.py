@@ -42,6 +42,8 @@ INSTALLED_DEFAULT_APPS = [
 
 INSTALLED_APPS = OWN_APPS + INSTALLED_DEFAULT_APPS
 
+AUTH_USER_MODEL = 'login.CustomUser'  # ✅ Correcto
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
